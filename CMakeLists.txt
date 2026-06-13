@@ -17,3 +17,8 @@ add_executable(hello_cuda src/hello_cuda.cu)
 target_compile_options(hello_cuda PRIVATE
     $<$<COMPILE_LANGUAGE:CUDA>:--extended-lambda>
 )
+
+add_executable(performance_test src/performance_test.cu)
+target_compile_options(performance_test PRIVATE
+    $<$<COMPILE_LANGUAGE:CUDA>:--extended-lambda>
+)

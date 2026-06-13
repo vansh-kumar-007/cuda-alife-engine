@@ -1,0 +1,9 @@
+@echo off
+echo Cleaning build directory...
+rmdir /s /q build
+mkdir build
+echo Configuring with CMake...
+cmake -S . -B build -G "NMake Makefiles"
+echo Building...
+cmake --build build
+echo Done.
