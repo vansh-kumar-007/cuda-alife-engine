@@ -22,3 +22,9 @@ add_executable(performance_test src/performance_test.cu)
 target_compile_options(performance_test PRIVATE
     $<$<COMPILE_LANGUAGE:CUDA>:--extended-lambda>
 )
+
+add_executable(particle_sim src/particle_sim.cu)
+target_compile_options(particle_sim PRIVATE
+    $<$<COMPILE_LANGUAGE:CUDA>:--extended-lambda>
+)
+
