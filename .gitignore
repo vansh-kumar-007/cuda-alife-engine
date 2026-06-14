@@ -68,3 +68,6 @@ vcpkg_installed/
 Testing/
 .cache/
 build/ 
+
+echo external/glfw/lib-vc2022/ >> .gitignore
+echo external/glfw/include/GLFW/glfw3native.h >> .gitignore
