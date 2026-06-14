@@ -37,3 +37,11 @@ add_executable(window_test
 )
 target_include_directories(window_test PRIVATE ${GLFW_INC} ${GLAD_INC} ${GLAD_INC}/KHR)
 target_link_libraries(window_test PRIVATE ${GLFW_LIB} opengl32)
+
+
+add_executable(particle_render
+    src/particle_render.cpp
+    ${GLAD_SRC}
+)
+target_include_directories(particle_render PRIVATE ${GLFW_INC} ${GLAD_INC})
+target_link_libraries(particle_render PRIVATE ${GLFW_LIB} opengl32)
