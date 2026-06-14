@@ -45,3 +45,12 @@ add_executable(particle_render
 )
 target_include_directories(particle_render PRIVATE ${GLFW_INC} ${GLAD_INC})
 target_link_libraries(particle_render PRIVATE ${GLFW_LIB} opengl32)
+
+add_executable(cuda_gl_interop
+    src/cuda_gl_interop.cu
+    ${GLAD_SRC}
+)
+target_include_directories(cuda_gl_interop PRIVATE ${GLFW_INC} ${GLAD_INC})
+target_link_libraries(cuda_gl_interop PRIVATE
+    ${GLFW_LIB} opengl32 CUDA::cudart
+)
