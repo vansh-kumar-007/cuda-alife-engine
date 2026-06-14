@@ -54,3 +54,21 @@ target_include_directories(cuda_gl_interop PRIVATE ${GLFW_INC} ${GLAD_INC})
 target_link_libraries(cuda_gl_interop PRIVATE
     ${GLFW_LIB} opengl32 CUDA::cudart
 )
+
+add_executable(creature_test
+    src/creature_test.cu
+    src/creatures.cu
+)
+target_include_directories(creature_test PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_compile_options(creature_test PRIVATE ${CUDA_OPTS})
+
+add_executable(creature_viz
+    src/creature_viz.cu
+    src/creatures.cu
+    ${GLAD_SRC}
+)
+target_include_directories(creature_viz PRIVATE
+    ${CMAKE_SOURCE_DIR}/include ${GLFW_INC} ${GLAD_INC})
+target_link_libraries(creature_viz PRIVATE
+    ${GLFW_LIB} opengl32 CUDA::cudart)
+target_compile_options(creature_viz PRIVATE ${CUDA_OPTS})
