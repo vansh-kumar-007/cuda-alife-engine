@@ -72,11 +72,12 @@ struct CreatureArrays {
 #define ENERGY_MOVE_COST        0.002f
 
 // Gain when eating
-#define ENERGY_GAIN_HERBIVORE   25.0f   // herbivore eats plant
+#define ENERGY_GAIN_HERBIVORE   20.0f   // herbivore eats plant
 #define ENERGY_GAIN_PREDATOR    35.0f   // predator eats herbivore
 
 // Reproduce when energy exceeds this threshold
-#define ENERGY_REPRODUCE        85.0f
+#define ENERGY_REPRODUCE        75.0f
+#define ENERGY_INHERIT          0.4f
 
 // Die when energy drops to zero
 #define ENERGY_DEATH            0.0f
@@ -84,11 +85,6 @@ struct CreatureArrays {
 // Sunlight energy gain per second for plants
 #define ENERGY_SUNLIGHT     8.0f    // was 2.0f
 
-// Minimum energy for reproduction
-#define ENERGY_REPRODUCE    75.0f   // was 85.0f
-
-// Child starts with this fraction of parent energy
-#define ENERGY_INHERIT  0.25f    // was 0.4f
 // ─────────────────────────────────────────────────────────────────────────────
 // GPU allocation / deallocation helpers (defined in creatures.cu)
 // ─────────────────────────────────────────────────────────────────────────────

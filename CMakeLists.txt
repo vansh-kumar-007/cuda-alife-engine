@@ -79,3 +79,10 @@ add_executable(food_system
 )
 target_include_directories(food_system PRIVATE ${CMAKE_SOURCE_DIR}/include)
 target_compile_options(food_system PRIVATE ${CUDA_OPTS})
+
+add_executable(ecosystem
+    src/ecosystem.cu
+    src/creatures.cu
+)
+target_include_directories(ecosystem PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_compile_options(ecosystem PRIVATE ${CUDA_OPTS})
