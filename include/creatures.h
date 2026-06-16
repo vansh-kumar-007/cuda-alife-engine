@@ -81,6 +81,14 @@ struct CreatureArrays {
 // Die when energy drops to zero
 #define ENERGY_DEATH            0.0f
 
+// Sunlight energy gain per second for plants
+#define ENERGY_SUNLIGHT     8.0f    // was 2.0f
+
+// Minimum energy for reproduction
+#define ENERGY_REPRODUCE    75.0f   // was 85.0f
+
+// Child starts with this fraction of parent energy
+#define ENERGY_INHERIT  0.25f    // was 0.4f
 // ─────────────────────────────────────────────────────────────────────────────
 // GPU allocation / deallocation helpers (defined in creatures.cu)
 // ─────────────────────────────────────────────────────────────────────────────

@@ -72,3 +72,10 @@ target_include_directories(creature_viz PRIVATE
 target_link_libraries(creature_viz PRIVATE
     ${GLFW_LIB} opengl32 CUDA::cudart)
 target_compile_options(creature_viz PRIVATE ${CUDA_OPTS})
+
+add_executable(food_system
+    src/food_system.cu
+    src/creatures.cu
+)
+target_include_directories(food_system PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_compile_options(food_system PRIVATE ${CUDA_OPTS})
